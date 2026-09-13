@@ -1,1 +1,1 @@
-# pkg-base
+# pkg-template
