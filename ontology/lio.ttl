@@ -1,0 +1,206 @@
+@prefix : <http://www.purl.org/net/lio#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsp: <http://www.owl-ontologies.com/2005/08/07/xsp.owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix protege: <http://protege.stanford.edu/plugins/owl/protege#> .
+@base <http://www.purl.org/net/lio#> .
+
+<http://purl.org/net/lio> rdf:type owl:Ontology ;
+                           dcterms:description "A Lightweight Ontology for Describing Images"@en ;
+                           dcterms:title "Lightweight Image Ontology (LIO)"@en ;
+                           vann:preferredNamespacePrefix "lio"@en ;
+                           vann:preferredNamespaceUri "http://purl.org/net/lio#"@en ;
+                           rdfs:comment "A Lightweight Ontology for Describing Images (LIO)"@en ,
+                                        "Authored by Margaret Warren and Pat Hayes for Metadata Authoring Systems, LLC, Metadata Authoring Technologies, LLC and ImageSnippets(tm) 2010"@en ;
+                           rdfs:label "LIO"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/net/lio#conveys
+:conveys rdf:type owl:ObjectProperty ;
+         rdfs:domain :PictorialElement ;
+         rdfs:comment "Relationship between an image and an emotion, mood or idea that it can be said to illustrate without actually depicting. FOr example, a Picasso blue period painting might convey sadness."@en ;
+         rdfs:label "conveys"@en .
+
+
+###  http://purl.org/net/lio#depicts
+:depicts rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf :shows ;
+         rdfs:domain :PictorialElement ;
+         rdfs:comment "Anything depicted by an image. Subproperty of lio:shows. Depiction does not imply looking like, eg an Xray of a chest can be said to depict the patient. As an intuitive guide, an image depicts anything it can be said to be a picture of. "@en ;
+         rdfs:label "depicts"@en .
+
+
+###  http://purl.org/net/lio#hasArtisticElement
+:hasArtisticElement rdf:type owl:ObjectProperty ;
+                    rdfs:domain :PictorialElement ;
+                    rdfs:comment "Relationship between an image and a pictorial element in the image (a line, shape, form, texture) which is used for pictorial or artistic effect. "@en ;
+                    rdfs:label "has artistic element"@en .
+
+
+###  http://purl.org/net/lio#hasDepictedBackground
+:hasDepictedBackground rdf:type owl:ObjectProperty ;
+                       rdfs:domain :Image ;
+                       rdfs:comment "Relation between an image and the background of the scene depicted by the image, for example distant mountains. Not all images need have such a background. As with looksLike, when the value is a class or skos:Concept, this means a typical element of that class, eg http://dbpedia.org/resource/Mountain. "@en ;
+                       rdfs:label "has depicted background"@en .
+
+
+###  http://purl.org/net/lio#hasInBackground
+:hasInBackground rdf:type owl:ObjectProperty ;
+                 rdfs:domain :PictorialElement ;
+                 rdfs:comment "Relationship between an image and something visible in the background of the scene depicted by the image."@en ;
+                 rdfs:label "has in background"@en .
+
+
+###  http://purl.org/net/lio#hasInForeground
+:hasInForeground rdf:type owl:ObjectProperty ;
+                 rdfs:domain :PictorialElement ;
+                 rdfs:comment "Relationship between an image and something visible in the foreground of the scene depicted by the image. "@en ;
+                 rdfs:label "has in foreground"@en .
+
+
+###  http://purl.org/net/lio#hasPictorialBackground
+:hasPictorialBackground rdf:type owl:ObjectProperty ;
+                        rdfs:domain :Image ;
+                        rdfs:comment "The pictorial (surface) background of the image itself. For example, the ground surface of a drawing. Not all images need have such a background. As with looksLike, when the value is a class or skos:Concept, this means a typical element of that class. "@en ;
+                        rdfs:label "has pictorial background"@en .
+
+
+###  http://purl.org/net/lio#hasSetting
+:hasSetting rdf:type owl:ObjectProperty ;
+            rdfs:domain :Image ;
+            rdfs:comment "Circumstances or general location which provide a context within which the image was created. This may be a location or an event, such as http://dbpedia.org/resource/Millennium_March_on_Washington. It need not be depicted in the image explicitly. As with looksLike, when the value is a class or skos:concept, this is understood to mean a typical instance of the class, eg a photograph taken in a kitchen hasSetting http://http://dbpedia.org/resource/Kitchen. "@en ;
+            rdfs:label "has setting"@en .
+
+
+###  http://purl.org/net/lio#hasVisualPart
+:hasVisualPart rdf:type owl:ObjectProperty ;
+               owl:inverseOf :visualPartOf ;
+               rdf:type owl:TransitiveProperty ;
+               rdfs:domain :PictorialElement ;
+               rdfs:range :PictorialElement ;
+               rdfs:comment "The inverse of the part-of relation on visual elements. "@en ;
+               rdfs:label "has visual part"@en .
+
+
+###  http://purl.org/net/lio#looksLike
+:looksLike rdf:type owl:ObjectProperty ;
+           rdfs:domain :PictorialElement ;
+           rdfs:comment """Characterization of something in terms of what it resembles or appears to be a representation of.  Examples include 'an outline of a man', a hand shape, etc.. Note, this property has a special meaning when applied to classes. When the value is a class or skos:category, this means that the visual element is a 'typical' or archetypical or iconic shape for an item in that class, such as a typical elephant outline. When the value is an individual, this means that the element visually resembles the individual, eg a profile of George Washington.
+    """@en ;
+           rdfs:label "looks like"@en .
+
+
+###  http://purl.org/net/lio#shows
+:shows rdf:type owl:ObjectProperty ;
+       rdfs:domain :Image ;
+       rdfs:comment " Anything in the scene depicted by an image, and which is visible in the image. Meant to include incidental depictions as well as any main subjects. For example, a tree in the background of a portrait, or a person in the crowd at a parade. Images may show many things that the images are not a picture of. "@en ;
+       rdfs:label "shows"@en .
+
+
+###  http://purl.org/net/lio#usesPictorially
+:usesPictorially rdf:type owl:ObjectProperty ;
+                 rdfs:domain :PictorialElement ;
+                 rdfs:comment "Relationship between an image and something visible (depicted or shown) in the image when that thing is used for pictorial or artistic effect. "@en ;
+                 rdfs:label "uses pictorially"@en .
+
+
+###  http://purl.org/net/lio#visualPartOf
+:visualPartOf rdf:type owl:ObjectProperty ,
+                       owl:TransitiveProperty ;
+              rdfs:domain :PictorialElement ;
+              rdfs:range :PictorialElement ;
+              rdfs:label "visual part of"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/net/lio#hasTag
+:hasTag rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Image ;
+        rdfs:range xsd:string ;
+        rdfs:comment "used to attach image tags within RDFa. Value is a single tag, not a list or sequence of tags. "@en ;
+        rdfs:label "has tag"@en .
+
+
+###  http://purl.org/net/lio#location
+:location rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Image ;
+          rdfs:range xsd:string ;
+          rdfs:comment "used to attach information about the sublocation where the image was created. This could refer to any geographical level or be less precisely individuated than a traditional geographical hierarchy. "@en ;
+          rdfs:label "location"@en .
+
+
+###  http://purl.org/net/lio#materials
+:materials rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Image ;
+           rdfs:range xsd:string ;
+           rdfs:comment "used to attach information about the materials used in the work. Intended to be synchronized with the Visual Resources Association vocabulary. "@en ;
+           rdfs:label "materials"@en .
+
+
+###  http://purl.org/net/lio#style
+:style rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Image ;
+       rdfs:range xsd:string ;
+       rdfs:comment "used to attach information about the style of the work. Intended to be synchronized with the Visual Resources Association vocabulary. "@en ;
+       rdfs:label "style"@en .
+
+
+###  http://purl.org/net/lio#technique
+:technique rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Image ;
+           rdfs:range xsd:string ;
+           rdfs:comment "used to attach information about the technique used in the work. Intended to be synchronized with the Visual Resources Association vocabulary. "@en ;
+           rdfs:label "technique"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/net/lio#Image
+:Image rdf:type owl:Class ;
+       rdfs:subClassOf :PictorialElement ;
+       rdfs:comment "An image. Any PictorialElement that is considered to be a complete image. Typically the main subject of an ImageSnippets description will be in this class. An image can be a visualPartOf another image."@en ;
+       rdfs:label "Image"@en .
+
+
+###  http://purl.org/net/lio#PictorialElement
+:PictorialElement rdf:type owl:Class ;
+                  rdfs:comment " Any visual entity; any graphical item, part, or visual property of an image or part of an image, including the image itself. Examples include lines, areas, colors and textures. Pictorial elements may have arbitrarily complex shapes and may be implicit, e.g. lines of perspective or outlined white spaces. Rectangular regions of an image are pictorial elements, and the entire image is also. Thus, Image is a subclass of PictorialElement. PictorialElements may be included in one another, giving a simple mereology of visual forms, with the property visualPartOf. Non-visual properties such as date or manner of creation are not considered to be PictorialElements. A property or aspect of an image can be considered to be a PictorialElment when it can be apprehended by vision alone."@en ;
+                  rdfs:label "Pictorial element"@en .
+
+
+###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
