@@ -1,3 +1,9 @@
 
 .idea/.gitignore
 .idea/misc.xml
+.DS_Store
+.idea/LNKD.tech Editor.xml
+.idea/codeStyles/codeStyleConfig.xml
+.idea/modules.xml
+.idea/vcs.xml
+pkg-template.iml
