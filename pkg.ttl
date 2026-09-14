@@ -1,13 +1,17 @@
 prefix dbpedia: <http://dbpedia.org/resource/>
-prefix schema: <http://schema.org/>
-prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 prefix dcterms: <http://purl.org/dc/terms/>
+prefix schema: <http://schema.org/>
+prefix vcard: <http://www.w3.org/2006/vcard/ns#>
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>
 
 @base <http://xmlsummerschool.org/entity> .
 
-<#Rob_Walpole> a schema:Person ;
+<#Rob_Walpole> a schema:Person , vcard:Individual ;
     schema:name "Rob Walpole" ;
+    vcard:given-name "Rob" ;
+    vcard:family-name "Walpole" ;
     schema:email "rob.walpole@devexe.co.uk" ;
+    vcard:hasEmail <mailto:rob.walpole@devexe.co.uk> ;
     schema:sameAs <https://x.com/rkw01> ,  <https://www.linkedin.com/in/robwalpole/> .
 
 <#Mohamed_Zergaoui> a schema:Person ;
