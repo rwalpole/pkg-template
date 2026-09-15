@@ -56,6 +56,7 @@
         <#Questions_and_Answers_with_the_Experts> .
 
 <#RDF_101> a schema:CourseInstance ;
+    dcterms:identifier "LD1" ;
     rdfs:label "RDF 101" ;
     schema:name "RDF 101 – Representing Knowledge, Graph Models, URI Identifiers, Visualisation, Intro to Triples (TTL)" ;
     schema:description "A foundational session introducing knowledge representation using graphs and triples, the role of URIs as unique identifiers, RDF fundamentals, the Semantic Web technology stack, and linked data principles." ;
@@ -64,6 +65,7 @@
     schema:attendee <#???> .
 
 <#GET_the_Data> a schema:CourseInstance ;
+    dcterms:identifier "LD2" ;
     rdfs:label "GET the Data" ;
     schema:name "GET the Data: An introduction to SPARQL" ;
     schema:description "Examines SPARQL as a query language for accessing RDF data, plus the protocol for retrieving results over HTTP." ;
@@ -80,6 +82,7 @@
     schema:attendee <#???> .
 
 <#RDF_Shapes_and_SHACL_for_Validation> a schema:CourseInstance ;
+    dcterms:identifier "LD4" ;
     rdfs:label "RDF Shapes and SHACL for Validation" ;
     schema:name "RDF Shapes and SHACL for Validation" ;
     schema:description "Introduces the SHACL language for validating RDF data, focusing on writing shapes to ensure data quality, detect inconsistencies, and enforce business rules in linked data." ;
@@ -87,19 +90,21 @@
     schema:about dbpedia:SHACL ;
     schema:attendee <#???> .
 
+<#RDF_Emerging_Technologies> a schema:CourseInstance ;
+    dcterms:identifier "LD5" ;
+    rdfs:label "RDF Emerging Technologies" ;
+    schema:name "RDF Emerging Technologies" ;
+    schema:description "Covers RDF 1.2 reification for provenance and claims disputation, plus emerging SHACL inference rule standards." ;
+    schema:instructor <#Peter_Winstanley> ;
+    schema:attendee <#???> .
+
 <#Building_a_Personal_Knowledge_Graph> a schema:CourseInstance ;
+    dcterms:identifier "LD6" ;
     rdfs:label "Building a Personal Knowledge Graph" ;
     schema:name "Linked Data Concepts and Applications - Building a Personal Knowledge Graph" ;
     schema:description "A hands-on session applying earlier concepts, where participants build a Personal Knowledge Graph (PKG), learning to design URIs, model data, locate resources, and create vocabularies." ;
     schema:instructor <#Rob_Walpole> ;
     schema:about dbpedia:Knowledge_graph ;
-    schema:attendee <#???> .
-
-<#RDF_Emerging_Technologies> a schema:CourseInstance ;
-    rdfs:label "RDF Emerging Technologies" ;
-    schema:name "RDF Emerging Technologies" ;
-    schema:description "Covers RDF 1.2 reification for provenance and claims disputation, plus emerging SHACL inference rule standards." ;
-    schema:instructor <#Peter_Winstanley> ;
     schema:attendee <#???> .
 
 <#Questions_and_Answers_with_the_Experts> a schema:CourseInstance ;
@@ -142,4 +147,3 @@ vcard:family-name rdfs:label "family name" .
 vcard:given-name rdfs:label "given name" .
 vcard:hasEmail  rdfs:label "has email" .
 vcard:nickname rdfs:label "nickname" .
-
