@@ -74,6 +74,7 @@
     schema:attendee <#???> .
 
 <#OWL_Data_Modelling> a schema:CourseInstance ;
+    dcterms:identifier "LD3" ;
     rdfs:label "OWL Data Modelling" ;
     schema:name "OWL Data Modelling" ;
     schema:description "An in-depth introduction to OWL, covering domain modelling through classes, properties and logical axioms, with an emphasis on ontology design best practices and consistency validation." ;
