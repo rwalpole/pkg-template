@@ -10,8 +10,8 @@
 @base <http://xmlsummerschool.org/entity> .
 
 <#Rob_Walpole> a schema:Person , vcard:Individual ;
-    schema:name "Rob Walpole" ;
     rdfs:label "Rob Walpole" ;
+    schema:name "Rob Walpole" ;
     vcard:given-name "Robert" ;
     foaf:givenName "Robert" ;
     vcard:nickname "Rob" ;
@@ -23,16 +23,18 @@
     schema:sameAs <https://x.com/rkw01> ,  <https://www.linkedin.com/in/robwalpole/> .
 
 <#Mohamed_Zergaoui> a schema:Person ;
+    rdfs:label "Mohamed Zergaoui" ;
     schema:name "Mohamed Zergaoui" ;
     rdfs:label "Mohamed Zergaoui" .
 
 <#Peter_Winstanley> a schema:Person ;
+    rdfs:label "Peter Winstanley" ;
     schema:name "Peter Winstanley" ;
     rdfs:label "Peter Winstanley" .
 
 <#XML_Summer_School,_2026> a schema:Event ;
-    schema:name "XML Summer School, 2026" ;
     rdfs:label "XML Summer School, 2026" ;
+    schema:name "XML Summer School, 2026" ;
     schema:startDate "2026-09-13"^^xsd:date ;
     schema:endDate "2026-09-18"^^xsd:date ;
     schema:location <http://dbpedia.org/resource/St_Edmund_Hall,_Oxford> ;
@@ -41,8 +43,8 @@
     schema:attendee <#???> .
 
 <#Linked_Data_and_Semantic_XML> a schema:Course ;
-    schema:name "Linked Data and Semantic XML" ;
     rdfs:label "Linked Data and Semantic XML" ;
+    schema:name "Linked Data and Semantic XML" ;
     schema:description "A course on Linked Data and Semantic XML, exploring the integration of XML with semantic web technologies." ;
     schema:hasCourseInstance
         <#RDF_101> ,
@@ -54,6 +56,7 @@
         <#Questions_and_Answers_with_the_Experts> .
 
 <#RDF_101> a schema:CourseInstance ;
+    rdfs:label "RDF 101" ;
     schema:name "RDF 101 – Representing Knowledge, Graph Models, URI Identifiers, Visualisation, Intro to Triples (TTL)" ;
     schema:description "A foundational session introducing knowledge representation using graphs and triples, the role of URIs as unique identifiers, RDF fundamentals, the Semantic Web technology stack, and linked data principles." ;
     schema:instructor <#Rob_Walpole> ;
@@ -61,6 +64,7 @@
     schema:attendee <#???> .
 
 <#GET_the_Data> a schema:CourseInstance ;
+    rdfs:label "GET the Data" ;
     schema:name "GET the Data: An introduction to SPARQL" ;
     schema:description "Examines SPARQL as a query language for accessing RDF data, plus the protocol for retrieving results over HTTP." ;
     schema:about dbpedia:SPARQL ;
@@ -68,6 +72,7 @@
     schema:attendee <#???> .
 
 <#OWL_Data_Modelling> a schema:CourseInstance ;
+    rdfs:label "OWL Data Modelling" ;
     schema:name "OWL Data Modelling" ;
     schema:description "An in-depth introduction to OWL, covering domain modelling through classes, properties and logical axioms, with an emphasis on ontology design best practices and consistency validation." ;
     schema:instructor <#Mohamed_Zergaoui> ;
@@ -75,6 +80,7 @@
     schema:attendee <#???> .
 
 <#RDF_Shapes_and_SHACL_for_Validation> a schema:CourseInstance ;
+    rdfs:label "RDF Shapes and SHACL for Validation" ;
     schema:name "RDF Shapes and SHACL for Validation" ;
     schema:description "Introduces the SHACL language for validating RDF data, focusing on writing shapes to ensure data quality, detect inconsistencies, and enforce business rules in linked data." ;
     schema:instructor <#Mohamed_Zergaoui> ;
@@ -82,6 +88,7 @@
     schema:attendee <#???> .
 
 <#Building_a_Personal_Knowledge_Graph> a schema:CourseInstance ;
+    rdfs:label "Building a Personal Knowledge Graph" ;
     schema:name "Linked Data Concepts and Applications - Building a Personal Knowledge Graph" ;
     schema:description "A hands-on session applying earlier concepts, where participants build a Personal Knowledge Graph (PKG), learning to design URIs, model data, locate resources, and create vocabularies." ;
     schema:instructor <#Rob_Walpole> ;
@@ -89,26 +96,43 @@
     schema:attendee <#???> .
 
 <#RDF_Emerging_Technologies> a schema:CourseInstance ;
+    rdfs:label "RDF Emerging Technologies" ;
     schema:name "RDF Emerging Technologies" ;
     schema:description "Covers RDF 1.2 reification for provenance and claims disputation, plus emerging SHACL inference rule standards." ;
     schema:instructor <#Peter_Winstanley> ;
     schema:attendee <#???> .
 
 <#Questions_and_Answers_with_the_Experts> a schema:CourseInstance ;
+    rdfs:label "Questions and Answers with the Experts" ;
     schema:name "Questions and Answers with the Experts and Advice on your code" ;
     schema:description "An expert panel Q&A session with all Linked Data faculty." ;
     schema:instructor <#Rob_Walpole>, <#Mohamed_Zergaoui>, <#Peter_Winstanley> ;
     schema:attendee <#???> .
 
+dbpedia:Knowledge_graph rdfs:label "Knowledge graph" .
+dbpedia:Resource_Description_Framework rdfs:label "Resource Description Framework" .
+dbpedia:SPARQL rdfs:label "SPARQL" .
+dcterms:hasPart rdfs:label "has part" .
 foaf:familyName rdfs:label "family name" .
 foaf:givenName rdfs:label "given name" .
 foaf:nick rdfs:label "nickname" .
 rdfs:label rdfs:label "label" .
 rdf:type rdfs:label "a" .
+schema:about rdfs:label "about" .
+schema:attendee rdfs:label "attendee" .
+schema:Course rdfs:label "Course" .
+schema:CourseInstance rdfs:label "Course Instance" .
+schema:description rdfs:label "description" .
 schema:email rdfs:label "email" .
+schema:endDate rdfs:label "end date" .
+schema:hasCourseInstance rdfs:label "has course instance" .
+schema:instructor rdfs:label "instructor" .
+schema:location rdfs:label "location" .
 schema:name rdfs:label "name" .
 schema:Person rdfs:label "Person" .
 schema:sameAs rdfs:label "same as" .
+schema:startDate rdfs:label "start date" .
+schema:location rdfs:label "location" .
 vcard:Individual rdfs:label "Individual" .
 vcard:family-name rdfs:label "family name" .
 vcard:given-name rdfs:label "given name" .
