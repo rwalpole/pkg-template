@@ -111,6 +111,7 @@ schema:Person rdfs:label "Person" .
 schema:sameAs rdfs:label "same as" .
 vcard:Individual rdfs:label "Individual" .
 vcard:family-name rdfs:label "family name" .
+vcard:given-name rdfs:label "given name" .
 vcard:hasEmail  rdfs:label "has email" .
 vcard:nickname rdfs:label "nickname" .
 
