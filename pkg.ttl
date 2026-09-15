@@ -111,7 +111,10 @@
 
 dbpedia:Knowledge_graph rdfs:label "Knowledge graph" .
 dbpedia:Resource_Description_Framework rdfs:label "Resource Description Framework" .
+dbpedia:SHACL rdfs:label "SHACL" .
 dbpedia:SPARQL rdfs:label "SPARQL" .
+<http://dbpedia.org/resource/St_Edmund_Hall,_Oxford> rdfs:label "St Edmund Hall, Oxford" .
+dbpedia:Web_Ontology_Language rdfs:label "Web Ontology Language" .
 dcterms:hasPart rdfs:label "has part" .
 foaf:familyName rdfs:label "family name" .
 foaf:givenName rdfs:label "given name" .
@@ -125,6 +128,7 @@ schema:CourseInstance rdfs:label "Course Instance" .
 schema:description rdfs:label "description" .
 schema:email rdfs:label "email" .
 schema:endDate rdfs:label "end date" .
+schema:Event rdfs:label "Event" .
 schema:hasCourseInstance rdfs:label "has course instance" .
 schema:instructor rdfs:label "instructor" .
 schema:location rdfs:label "location" .
