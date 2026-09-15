@@ -109,6 +109,7 @@
     schema:attendee <#???> .
 
 <#Questions_and_Answers_with_the_Experts> a schema:CourseInstance ;
+    dcterms:identifier "LD7" ;
     rdfs:label "Questions and Answers with the Experts" ;
     schema:name "Questions and Answers with the Experts and Advice on your code" ;
     schema:description "An expert panel Q&A session with all Linked Data faculty." ;
