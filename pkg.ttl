@@ -1,10 +1,11 @@
-prefix dbpedia: <http://dbpedia.org/resource/>
-prefix dcterms: <http://purl.org/dc/terms/>
-prefix foaf: <http://xmlns.com/foaf/0.1/>
-prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-prefix schema: <http://schema.org/>
-prefix vcard: <http://www.w3.org/2006/vcard/ns#>
-prefix xsd: <http://www.w3.org/2001/XMLSchema#>
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 @base <http://xmlsummerschool.org/entity> .
 
@@ -98,3 +99,18 @@ prefix xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:description "An expert panel Q&A session with all Linked Data faculty." ;
     schema:instructor <#Rob_Walpole>, <#Mohamed_Zergaoui>, <#Peter_Winstanley> ;
     schema:attendee <#???> .
+
+foaf:familyName rdfs:label "family name" .
+foaf:givenName rdfs:label "given name" .
+foaf:nick rdfs:label "nickname" .
+rdfs:label rdfs:label "label" .
+rdf:type rdfs:label "a" .
+schema:email rdfs:label "email" .
+schema:name rdfs:label "name" .
+schema:Person rdfs:label "Person" .
+schema:sameAs rdfs:label "same as" .
+vcard:Individual rdfs:label "Individual" .
+vcard:family-name rdfs:label "family name" .
+vcard:hasEmail  rdfs:label "has email" .
+vcard:nickname rdfs:label "nickname" .
+
