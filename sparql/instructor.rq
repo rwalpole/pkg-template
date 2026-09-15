@@ -1,0 +1,5 @@
+SELECT DISTINCT ?name {
+   ?person a schema:Person .
+   ?course schema:instructor ?instructor .
+   ?instructor schema:name ?name .
+}

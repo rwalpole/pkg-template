@@ -1,0 +1,8 @@
+SELECT DISTINCT ?courseName ?instructorName {
+   ?person a schema:Person .
+   ?course schema:instructor ?instructor ;
+           schema:name ?courseName ;
+           dcterms:identifier ?identifier .
+   ?instructor schema:name ?instructorName .
+}
+ORDER BY ?identifier
